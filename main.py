@@ -1,12 +1,8 @@
-def calculate():
-    """
-    calculates the total
-    :return: None
-    """
-    price = 15.75
-    quantity = 3  # TODO change quantity to 5
-    print(f'Total: {price * quantity}')
+def sort(numbers):
+    pass
 
 
 if __name__ == '__main__':
-    calculate()
+    numbers = [64, 34, 25, 12, 22, 11, 90]
+    sort(numbers)
+    print(numbers)
