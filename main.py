@@ -10,6 +10,8 @@ def run_sort(numbers):
     if is_sort(numbers):
         return numbers
     return run_sort(numbers)
+
+
 def is_sort(numbers):
     return all(numbers[i] <= numbers[i+1] for i in range(len(numbers)-1))
 
