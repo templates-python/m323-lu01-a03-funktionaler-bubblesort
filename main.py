@@ -1,24 +1,23 @@
-def sort(numbers):
-    if len(numbers) <= 1:
-        return numbers
-    if numbers[0] > numbers[1]:
-        return [numbers[1]] + sort([numbers[0]] + numbers[2:])
-    return [numbers[0]] + sort(numbers[1:])
+def sort(list):
+    list = bubble_sort(list)
+    if is_sort(list):
+        return list
+    return sort(list)
 
 
-def run_sort(numbers):
-    numbers = sort(numbers)
-    if is_sort(numbers):
-        return numbers
-    return run_sort(numbers)
+def bubble_sort(list):
+    if len(list) <= 1:
+        return list
+    if list[0] > list[1]:
+        return [list[1]] + bubble_sort([list[0]] + list[2:])
+    return [list[0]] + bubble_sort(list[1:])
 
 
-def is_sort(numbers):
-    return all(numbers[i] <= numbers[i + 1] for i in range(len(numbers) - 1))
+def is_sort(list):
+    return all(list[i] <= list[i + 1] for i in range(len(list) - 1))
 
 
 if __name__ == '__main__':
-    numbers = [64, 34, 25, 12, 22, 11, 90]
-    print(numbers)
-    new_num = run_sort(numbers)
-    print(new_num)
+    arr = [64, 34, 25, 12, 22, 11, 90]
+    arr_new = sort(arr)
+    print(arr_new)
