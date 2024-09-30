@@ -5,6 +5,7 @@ def sort(numbers):
         return [numbers[1]] + sort([numbers[0]] + numbers[2:])
     return [numbers[0]] + sort(numbers[1:])
 
+
 def run_sort(numbers):
     numbers = sort(numbers)
     if is_sort(numbers):
@@ -13,7 +14,8 @@ def run_sort(numbers):
 
 
 def is_sort(numbers):
-    return all(numbers[i] <= numbers[i+1] for i in range(len(numbers)-1))
+    return all(numbers[i] <= numbers[i + 1] for i in range(len(numbers) - 1))
+
 
 if __name__ == '__main__':
     numbers = [64, 34, 25, 12, 22, 11, 90]
