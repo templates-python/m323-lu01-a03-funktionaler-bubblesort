@@ -1,3 +1,8 @@
+"""Funktionaler Bubblesort.
+
+Aufgabenstellung: https://wiki.bzz.ch/modul/m323/learningunits/lu01/aufgaben/funktionalerbubblesort
+"""
+
 def sort(numbers):
     pass
 
